@@ -51,6 +51,7 @@
                         <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'recientes'%}">Productos Recientes</a>
                         {% if perms.app.add_producto %}
                         <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'agregar_producto'%}">Agregar Producto</a>
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'producto_collection'%}">API LOCAL</a>
                         {% endif %}
 
                         <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'listar_producto'%}">Listar Productos</a>
