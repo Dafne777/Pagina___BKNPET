@@ -1,0 +1,130 @@
+{%extends 'app/base.html'%}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+<link rel="stylesheet" href="{% static 'app/css/estilos_2.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/estilos_1.css'%}">
+{% endblock %}
+
+
+
+{% block  contenido %}
+
+<section class="body">
+    <div class="container">
+        <div class="form-image">
+            <img src="{% static 'app/img/undraw_friends_r511.svg'%}" alt="">
+        </div>
+        <div class="form">
+            <form method="post"  id="formulario">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Bienvenido!</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="id_user">Username</label>
+                        <input id="id_user" type="text" name="user" placeholder="Ingrese Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="id_petname">Nombre Mascota</label>
+                        <input id="id_petname" type="text" name="petname" placeholder="Ingrese Nombre Mascota" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="id_email">E-mail</label>
+                        <input id="id_email" type="email" name="email" placeholder="Ingrese su email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="contraseña">Contraseña</label>
+                        <input id="contraseña" type="password" name="contraseña" placeholder="Ingresa contraseña" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirma contraseña</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Repita contraseña" required>
+                    </div>
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Genero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="female" type="radio" name="gender">
+                            <label for="female">Femenino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="others" type="radio" name="gender">
+                            <label for="others">Otros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="none" type="radio" name="gender">
+                            <label for="none">Prefiero no decir</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cmd-inputs mt-5">
+                    <div class="gender-title">
+                        <h6>Comuna</h6>
+                    </div>
+                    <div class="cmb-group">
+                        <select  class="required" name="city cmbCiudades">
+                            <option >Santiago</option>
+                            <option >Conchalí</option>
+                            <option >Huechuraba</option>
+                            <option >Independencia</option>
+                            <option >Quilicura</option>
+                            <option >Recoleta</option>
+                            <option >Renca</option>
+                            <option>Las Condes</option>
+                            <option >Lo Barnechea</option>
+                            <option >Providencia</option>
+                            <option >Vitacura</option>
+                            <option selected="selected" >No se encuentra comuna</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'app/js/validador.js' %}"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" 
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" 
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{%extends 'app/base.html'%}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+{% endblock %}
+
+{% block contenido %}
+<section>
+    <br>
+    <br>
+    <div class="container" id="container_01">
+        <br>
+        <br>
+        <br>
+        <img src="{% static 'app/img/botella perro.jpg'%}" alt="Correas">
+        <h1 class="titulo_pro">Botella de Agua</h1>
+        <h2 class="precio">$4.990</h2>
+</section>
+
+
+<section>
+    <br>
+    <div class="container" id="container_02">
+        <br>
+        <br>
+        <h3 class="descripcion">Descripcion</h3>
+        <p> Sabemos que te encanta dar paseos con tus mascotas, 
+            divertirte y pasar el rato con ella, pero también debes tener en cuenta que 
+            ellos se cansan y deben mantenerse hidratados. Por eso llega este innovador producto, 
+            de fácil uso y que no ocupa mucho espacio. Aqua Dog es el bebedero de agua portátil ideal, 
+            simplemente llene el contenedor antes de su viaje y cuando su mascota tenga sed, apriete para 
+            llenar el tazón de fuente adjunto y acercar a su mascota, cuando haya terminado solo suelte para 
+            drenar el agua nuevamente dentro de la botella sin desperdiciar.</p>
+        <br>
+        <h3 class="Características">Características</h3>
+        <p>• El agua sucia no se drenará dentro del bebedero, manteniendo el agua limpia.</p>
+        <p>• Si deseas que el agua se devuelva, debes retirar la bolita que esta dentro de la botella.</p>
+        <p>• Sin desperdicio de agua, sin derrames.</p>
+        <p>• Ideal para perros de todos los tamaños y edades.</p>
+        <p>• Se ajusta en el porta vasos de su vehículo.</p>
+        <br>
+        <h3 class="Medidad">Medidas</h3>
+        <p>• Capacidad: 500 ml aprox.</p>
+        <p>• Alto: 22 cm</p>
+        <p></p>
+        <br>
+        <h3 class="Peso">Peso</h3>
+        <p>• N/D</p>
+        <br>
+        <br>
+</section>
+
+{% endblock %}

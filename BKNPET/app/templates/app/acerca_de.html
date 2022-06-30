@@ -1,0 +1,36 @@
+{%extends 'app/base.html'%}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos_1.css'%}">
+{% endblock %}
+
+{% block  contenido %}
+
+
+<section>
+    <div class="cover d-flex justify-content-center align-items-center flex-column"
+        style="background-image: url({% static 'app/img/rsz_anna-dudkova-urs_y9nwfcc-unsplash.jpg'%})">
+        <h1>BKNPET</h1>
+    </div>
+    <div class="portada">
+        <img src="{% static 'app/img/bknpet.JPG'%}" alt="">
+    </div>
+    <br>
+    <div class="container">
+        <br>
+    <div>
+        <h1>Quienes Somos</h1>
+        <p class="texto">
+            BKNPET es más que una tienda de mascotas, es un estilo de vida, aprendemos a diario con las experiencias de nuestros clientes; observamos, escuchamos y nos adaptamos a los constantes cambios en el cuidado de tu mascota. Estamos para servirles y deseamos acercarnos cada vez más a ustedes.
+            Somos una tienda que nació en Julio del 2018. Ubicados en la Comuna de Providencia en Santiago de Chile, nos enfocamos en proveer servicios e insumos que requierasu mascota consentida.Ofrecemos una gran variedad de Alimentos, Accesorios y Medicamentos para ellas.
+            Adicionalmente, contamos con Servicios Consulta Medico Veterinaria y Peluquería Canina/Felina, en manos de nuestros profesionales quienes además de orientarse al cliente, proporcionan la mejor experiencia en su especialidad.
+        </p>
+    </div>
+</section>
+
+
+
+{% endblock %}

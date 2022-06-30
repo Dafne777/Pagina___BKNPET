@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap y CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/css/estilos_1.css'%}">
+
+
+    
+    {% block css %}
+    {% endblock %}
+
+
+    <!-- imagen de logo -->
+    <link rel="shortcut icon" href="{% static 'app/img/logo.png' %}" type="image/x-icon">
+    
+    <title>Pagina Principal</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg " style="background-color: #4e1088;">
+            <a class="navbar-brand" href="">
+                <img src=" {% static 'app/img/logo.png' %}" width="140" height="80" alt="Logo">
+            </a>
+            
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color: white;" href="{% url 'home' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="{% url 'contacto'%}">contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="{% url 'registrar'%}">Registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="{% url 'acerca_de'%}">Acerca de</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nuevos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                        {% if user.is_authenticated %}
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'recientes'%}">Productos Recientes</a>
+                        {% if perms.app.add_producto %}
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'agregar_producto'%}">Agregar Producto</a>
+                        {% endif %}
+
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'listar_producto'%}">Listar Productos</a>
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'logout'%}">Cerrar sesion</a>
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'home'%}"> @ {{ user.username}}</a>
+
+                        {% else %}
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'registro'%}">Registrarse</a>
+                        <a class="dropdown-item" style="color: #7d34c6;" href="{% url 'login'%}">Iniciar sesion</a>
+
+                        {% endif %}
+                    
+                        
+                    </div>
+        </nav>
+
+
+
+
+        <div id="contenido">
+            
+
+
+            {% block contenido %}
+            {% endblock %}
+        </div>
+
+
+
+
+    <footer>
+        <div class="card text-center mt-5">
+            <div class="card-header" >
+                <a href="{% url 'home' %}" class="lo" style="color: white;">
+                    BKNPET  -   🐾Tienda de Mascotas.🐾 
+                </a>
+            </div>
+            <div class="card-body">
+                <h2>Contactos:</h2>
+                <div class="icon">
+                    <a href = "#" class = "fa fa-facebook"></a>
+                    <a href = "https://api.whatsapp.com/send?phone=56981963332" class = "fa fa-whatsapp"></a>
+                    <a href = "https://www.instagram.com/bknpet/" class = "fa fa-instagram"></a>
+                    <a href = "#" class = "fa fa-envelope"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    {% block js %}
+    {% endblock %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            {%  if messages %}
+              {% for m in messages %}
+                <script>
+                    Swal.fire({
+                        "title": "Felicitaciones",
+                        "text" : "{{m}}",
+                        "icon" : "success"
+                    })
+                </script>
+              {% endfor %}
+            {% endif %}
+        <!-- simbolos de contacto -->
+        <script src="https://kit.fontawesome.com/ed0e803444.js" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

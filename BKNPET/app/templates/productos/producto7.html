@@ -1,0 +1,47 @@
+{%extends 'app/base.html'%}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+{% endblock %}
+
+{% block contenido %}
+
+<section>
+    <br>
+    <br>
+    <div class="container" id="container_01">
+        <br>
+        <br>
+        <br>
+        <img src="{% static 'app/img/churu.JPG'%}" alt="Churu">
+        <h1 class="titulo_pro">Churu</h1>
+        <h2 class="precio">$3.500</h2>
+</section>
+
+
+<section>
+    <br>
+    <div class="container" id="container_02">
+        <br>
+        <br>
+        <h3 class="descripcion">Descripcion</h3>
+        <p> Son un snack cremoso con una mezcla de agua, atun o pollo, con tapioca, te verde, vitamina E, taurina y saborizantes naturales. No contienen granos ni colorantos o preservantes artificiales. Todos muy sanos.
+            Los gatitos enloquecen por ellos y sus distintos sabores.</p>
+        <br>
+        <h3 class="Características">Características</h3>
+        <p>N/D</p>
+        <br>
+        <h3 class="Medidad">Medidas</h3>
+        <P>N/D</P>
+        <p></p>
+        <br>
+        <h3 class="Peso">Peso</h3>
+        <p>• 56 gr</p>
+        <br>
+        <br>
+</section>
+
+{% endblock %}

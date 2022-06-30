@@ -1,0 +1,44 @@
+{%extends 'app/base.html'%}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+{% endblock %}
+
+{% block contenido %}
+<section>
+    <br>
+    <br>
+    <div class="container" id="container_01">
+        <br>
+        <br>
+        <br>
+        <img src="{% static 'app/img/mordedores.JPG'%} " alt="Sogas mordedoras">
+        <h1 class="titulo_pro">Sogas Mordedoras</h1>
+        <h2 class="precio">$1.500</h2>
+</section>
+
+
+<section>
+    <br>
+    <div class="container" id="container_02">
+        <br>
+        <br>
+        <h3 class="descripcion">Descripcion</h3>
+        <p>Este divertido juguete de nudos está diseñado para morder y limpiar la dentadura de tu incondicional. Perfecto juguete de cuerda para tirar, lanzar, buscar y masticar. Los juguetes de cuerda pueden ser muy cómodas para la dentición de cachorros y pueden ayudar a mejorar la salud dental de tu perro. Mantén a tu perro entretenido durante horas y evita el comportamiento destructivo de masticación.</p>
+        <br>
+        <h3 class="Características">Características</h3>
+        <p>• Material Hilo </p>
+        <br>
+        <h3 class="Medidad">Medidas</h3>
+        <p>• 30 x 6 cm</p>
+        <br>
+        <h3 class="Peso">Peso</h3>
+        <p>• 114 GR</p>
+        <br>
+        <br>
+</section>
+
+{% endblock %}

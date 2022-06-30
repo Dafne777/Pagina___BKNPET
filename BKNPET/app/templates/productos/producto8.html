@@ -1,0 +1,47 @@
+{%extends 'app/base.html'%}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+{% endblock %}
+
+{% block contenido %}
+<section>
+    <br>
+    <br>
+    <div class="container" id="container_01">
+        <br>
+        <br>
+        <br>
+        <img src="{% static 'app/img/cama.png'%}" alt="Cama">
+        <h1 class="titulo_pro">Cama para Gatos</h1>
+        <h2 class="precio">$29.990</h2>
+</section>
+
+
+<section>
+    <br>
+    <div class="container" id="container_02">
+        <br>
+        <br>
+        <h3 class="descripcion">Descripcion</h3>
+        <P>Dale a tu regalón la seguridad, comodidad y bienestar que merece con la cama Azul-Cuadros, diseñada para razas pequeñas y medianas</P>
+        <p>Esta cama de la marca Club es lavable en su interior, lo que te permitirá mantenerla limpia para una correcta higiene de tu mascota y de los elementos que puedas dejar allí, como juguetes y frazadas.</p>
+        <p>Fabricada en material de poliéster y relleno de fibra de poliéster, con esta cama mantendrás a tu mascota en perfectas condiciones, aislándolo del frío del piso y otros agentes externos como bacterias que puedan afectar su salud. ¡De seguro te lo agradecerá!</p>
+        <br>
+        <h3 class="Características">Características</h3>
+        <p>• N/D</p>
+        <br>
+        <h3 class="Medidad">Medidas</h3>
+        <p>• Dimensiones 25 x 25 x 20 cm</p>
+        <p></p>
+        <br>
+        <h3 class="Peso">Peso</h3>
+        <p>• 1 Kg</p>
+        <br>
+        <br>
+</section>
+
+{% endblock %}

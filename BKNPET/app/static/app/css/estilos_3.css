@@ -1,0 +1,34 @@
+input[type=text], input[type=email],
+input[type=number], select, textarea {
+
+    width: 100%;
+    padding: 5px;
+
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    padding:5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10%;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 14%;
+}
+
+
+.button:hover {
+    background-color: #6b63fff1;
+}
+
+
+
+.formulario_contacto {
+    width: 500px;
+    margin-top:50px;
+}
+

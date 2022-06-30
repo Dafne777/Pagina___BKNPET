@@ -1,0 +1,33 @@
+{%extends 'app/base.html'%}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'app/css/estilos_1.css'%}">
+{% endblock %}
+
+{% block contenido %}
+<div class="subheader mt-5">
+    <img src="{% static 'app/img/undraw_dog_walking_re_l61p.svg' %}" alt="">
+</div>
+<div class ="contenido mt-5">
+    <div class = "caja1">
+        <h1 class="titulo">BKN PET</h1>
+        <h2>Metodos de Contacto</h2>
+        <p>Oficina Central: Padre Alonso de Ovalle 1515, Santiago Centro. - Chile</p>
+        <p>Consultas al Dm o Whatsapp: +56981963332</p>
+        <p>Correo Electronico: bknpet@gmail.com</p>
+    </div>
+    <div class="caja2">
+        <h2 class="titulo">Tambien puedes seguirnos en nuestras redes sociales!</h2>
+        <div>
+            <a href = "#" class = "fa fa-facebook"></a>
+            <a href = "https://api.whatsapp.com/send?phone=56981963332" class = "fa fa-whatsapp"></a>
+            <a href = "https://www.instagram.com/bknpet/" class = "fa fa-instagram"></a>
+            <a href = "#" class = "fa fa-envelope"></a>
+        </div>
+    </div>    
+</div>
+
+{% endblock %}
